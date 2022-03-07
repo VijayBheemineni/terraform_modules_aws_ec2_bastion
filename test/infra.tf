@@ -13,7 +13,8 @@ provider "aws" {
 }
 
 module "bastion" {
-  source              = "../../terraform_modules_aws_ec2_bastion"
+  source = "git::https://github.com/VijayBheemineni/terraform_modules_aws_ec2_bastion.git?ref=v0.1.0"
+  # source              = "../../terraform_modules_aws_ec2_bastion"
   tags                = var.tags
   vpc_config          = var.vpc_config
   bastion_sg_config   = var.bastion_sg_config
